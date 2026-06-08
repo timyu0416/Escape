@@ -1,0 +1,6 @@
+{
+  "name": "瑠下的人 密室逃脫宣傳網",
+  "description": "1960年代『瑠公圳分屍案』主題沉浸式密室逃脫宣傳網站。包含新聞拼圖、通聯記錄調查、封存檔案紫外線透視、卡式錄音帶解碼、嫌疑人推理牆等五大關卡線上體驗以及雙結局選擇。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

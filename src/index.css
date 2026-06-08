@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;700;900&family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Noto Serif TC", "Playfair Display", Georgia, serif;
+  --font-mono: "Courier Prime", "Share Tech Mono", monospace;
+  --color-blood: #991b1b;
+  --color-blood-bright: #ef4444;
+  --color-blood-dark: #7f1d1d;
+  --color-vintage-paper: #ece4db;
+  --color-vintage-ink: #2b2621;
+}
+
+/* Custom retro grunge scanlines / vignette effects */
+.dossier-card {
+  background: radial-gradient(circle at center, #fdfbfa 0%, #ece4db 100%);
+  color: #1e1b18;
+  box-shadow: 0 10px 30px -5px rgba(0,0,0,0.8), inset 0 0 40px rgba(43,38,33,0.15);
+}
+
+.blacked-out {
+  background-color: #111111;
+  color: #111111;
+  user-select: none;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #020203;
+}
+::-webkit-scrollbar-thumb {
+  background: #3a1515;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #7f1d1d;
+}
+
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+    filter: brightness(1);
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+    filter: brightness(0.7) contrast(1.2);
+  }
+}
+
+.flicker-effect {
+  animation: flicker 4s infinite;
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  20% { opacity: 0.1; }
+  30% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.flash-active {
+  animation: flash 0.8s ease-out;
+}
